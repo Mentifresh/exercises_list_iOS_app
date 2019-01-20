@@ -18,6 +18,7 @@
                 <outlet property="exerciseImageview" destination="qaC-hU-Ymy" id="lqb-qR-gsM"/>
                 <outlet property="exerciseMusclesLabel" destination="fOI-0B-lEG" id="ygX-7U-oAw"/>
                 <outlet property="exerciseNameLabel" destination="LAC-U3-aSD" id="q4N-QM-thB"/>
+                <outlet property="imagesCollectionView" destination="iuy-ma-Q5E" id="0aa-Rx-wYw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -78,6 +79,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iuy-ma-Q5E">
+                    <rect key="frame" x="8" y="223" width="359" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="P2c-wS-mBN"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mBA-Ra-Asd">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -87,6 +101,8 @@
                 <constraint firstItem="c2d-3u-lZ8" firstAttribute="leading" secondItem="qaC-hU-Ymy" secondAttribute="trailing" constant="8" id="GKQ-EA-4R9"/>
                 <constraint firstItem="qaC-hU-Ymy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="JeT-c0-IGE"/>
                 <constraint firstItem="fOI-0B-lEG" firstAttribute="top" secondItem="wcD-wJ-VHy" secondAttribute="bottom" constant="8" id="MY8-6Y-uBZ"/>
+                <constraint firstItem="iuy-ma-Q5E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="OHx-gc-EIL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iuy-ma-Q5E" secondAttribute="trailing" constant="8" id="Om2-LL-mm2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wcD-wJ-VHy" secondAttribute="trailing" constant="8" id="RMS-0h-tve"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UCG-lc-SKT" secondAttribute="trailing" constant="8" id="Rf7-LO-3Sd"/>
                 <constraint firstItem="LAC-U3-aSD" firstAttribute="leading" secondItem="qaC-hU-Ymy" secondAttribute="trailing" constant="8" id="Tt2-A7-NNy"/>
@@ -97,9 +113,11 @@
                 <constraint firstItem="wcD-wJ-VHy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="eZz-dS-jfl"/>
                 <constraint firstItem="UCG-lc-SKT" firstAttribute="top" secondItem="qaC-hU-Ymy" secondAttribute="bottom" constant="8" id="etK-Tk-dy2"/>
                 <constraint firstItem="UCG-lc-SKT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="i2T-uH-t4c"/>
+                <constraint firstItem="iuy-ma-Q5E" firstAttribute="top" secondItem="fOI-0B-lEG" secondAttribute="bottom" constant="8" id="pTK-6L-mBt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c2d-3u-lZ8" secondAttribute="trailing" constant="8" id="siY-yy-CbN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
 </document>

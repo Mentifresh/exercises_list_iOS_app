@@ -16,20 +16,22 @@ class DetailedExerciseController: UIViewController {
     @IBOutlet weak var exerciseDescriptionLabel: UILabel!
     @IBOutlet weak var exerciseEquipmentLabel: UILabel!
     @IBOutlet weak var exerciseMusclesLabel: UILabel!
+    @IBOutlet weak var imagesCollectionView: UICollectionView!
     
     var exercise: Exercise?
-    
-    var exerciseImage: UIImage?
-    var exerciseName: String?
-    var exerciseCategory: String?
-    var exerciseDescription: String?
-    var exerciseEquipment: String?
-    var exerciseMuscles: String?
+    var images: [UIImage] = [UIImage()]
+    let collectionCellId = "collectionCellId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.prefersLargeTitles = false
+        
+        let image = exercise!.image!
+        images = [image,image,image,image]
+        
+        
+        configureTableview()
         
         addContent()
     }
@@ -45,4 +47,32 @@ class DetailedExerciseController: UIViewController {
             exerciseMusclesLabel.text = exercise.muscles
         }
     }
+    
+    func configureTableview() {
+        imagesCollectionView.delegate = self
+        imagesCollectionView.dataSource = self
+        imagesCollectionView.register(ImagesCollectionViewCell.self, forCellWithReuseIdentifier: collectionCellId)
+    }
+}
+
+extension DetailedExerciseController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellId, for: indexPath) as! ImagesCollectionViewCell
+        
+        // FIXME: fix crash when assigning image
+//        cell.image = images[indexPath.row]
+        
+        return cell
+    }
+    
+    
+    
+    
+    
+    
 }
