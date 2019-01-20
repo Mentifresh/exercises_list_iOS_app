@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciesesCellIdentifier" rowHeight="160" id="KGk-i7-Jjw" customClass="ExerciseCell" customModule="exercises_list_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="557" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="557" height="159.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2v-Zo-21v">
+                        <rect key="frame" x="96" y="51" width="433" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="1Y3-vg-cAj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2zB-gV-ouX">
+                        <rect key="frame" x="8" y="8" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="7QU-ja-87B"/>
+                            <constraint firstAttribute="width" constant="80" id="KVd-64-azu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIL-0D-SsQ">
+                        <rect key="frame" x="8" y="96" width="541" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="MG3-A7-L2n"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muscles:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkD-do-aMR">
+                        <rect key="frame" x="8" y="125" width="541" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Lmu-2f-Uct"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the exercise" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpa-40-SmL">
+                        <rect key="frame" x="96" y="19" width="449" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="8d2-gt-a6Q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2zB-gV-ouX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="1mu-i1-qER"/>
+                    <constraint firstItem="KkD-do-aMR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="8gT-D5-4Kc"/>
+                    <constraint firstItem="j2v-Zo-21v" firstAttribute="top" secondItem="Dpa-40-SmL" secondAttribute="bottom" constant="8" id="Afn-7H-npK"/>
+                    <constraint firstItem="DIL-0D-SsQ" firstAttribute="top" secondItem="2zB-gV-ouX" secondAttribute="bottom" constant="8" id="BSb-3A-bJ8"/>
+                    <constraint firstAttribute="trailing" secondItem="DIL-0D-SsQ" secondAttribute="trailing" constant="8" id="BwO-jH-FQo"/>
+                    <constraint firstAttribute="trailing" secondItem="KkD-do-aMR" secondAttribute="trailing" constant="8" id="I1w-bo-00y"/>
+                    <constraint firstItem="j2v-Zo-21v" firstAttribute="leading" secondItem="2zB-gV-ouX" secondAttribute="trailing" constant="8" id="RvG-fY-Geo"/>
+                    <constraint firstItem="Dpa-40-SmL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="8" id="UEf-bJ-mAY"/>
+                    <constraint firstItem="2zB-gV-ouX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="dm6-Pt-SeY"/>
+                    <constraint firstItem="Dpa-40-SmL" firstAttribute="leading" secondItem="2zB-gV-ouX" secondAttribute="trailing" constant="8" id="dyK-X0-e1L"/>
+                    <constraint firstItem="DIL-0D-SsQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="j9v-Q8-omH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="j2v-Zo-21v" secondAttribute="trailing" constant="8" id="mYo-S7-G69"/>
+                    <constraint firstItem="Dpa-40-SmL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="oPM-Wm-LOx"/>
+                    <constraint firstItem="KkD-do-aMR" firstAttribute="top" secondItem="DIL-0D-SsQ" secondAttribute="bottom" constant="8" id="x0X-Uo-ptp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ExerciseCategoryLabel" destination="j2v-Zo-21v" id="tlD-ha-OIr"/>
+                <outlet property="ExerciseEquipmentLabel" destination="DIL-0D-SsQ" id="Her-2r-qQi"/>
+                <outlet property="ExerciseMusclesLabel" destination="KkD-do-aMR" id="cAn-OP-QKA"/>
+                <outlet property="exerciseImageView" destination="2zB-gV-ouX" id="LTT-4J-whK"/>
+                <outlet property="exerciseNameLabel" destination="Dpa-40-SmL" id="8aa-yb-pXV"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="152.92353823088456"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="no_icon" width="37.5" height="37.5"/>
+    </resources>
+</document>
