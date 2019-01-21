@@ -28,8 +28,10 @@ class DetailedExerciseController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         
         let image = exercise!.image!
-        images = [image,image,image,image]
         
+        // Using static images as I have not been able to find any endpoint that provides a variety of images.
+        // Only the endpoint of the main image
+        images = [image,image,image,image]
         
         configureTableview()
         
@@ -51,28 +53,25 @@ class DetailedExerciseController: UIViewController {
     func configureTableview() {
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
-        imagesCollectionView.register(ImagesCollectionViewCell.self, forCellWithReuseIdentifier: collectionCellId)
+        imagesCollectionView.register(UINib(nibName: "ImagesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: collectionCellId)
     }
 }
 
-extension DetailedExerciseController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension DetailedExerciseController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellId, for: indexPath) as! ImagesCollectionViewCell
         
-        // FIXME: fix crash when assigning image
-//        cell.image = images[indexPath.row]
+        cell.image = images[indexPath.row]
         
         return cell
     }
     
-    
-    
-    
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenWidth = self.view.frame.width - 16 // minus the margin we have given in the nib
+        return CGSize(width: screenWidth, height: 100)
+    }
 }
